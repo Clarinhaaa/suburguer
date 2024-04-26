@@ -1,0 +1,81 @@
+{
+  "ingredientes": {
+    "paes": [
+      {
+        "id": 1,
+        "tipo": "Italiano Branco"
+      },
+      {
+        "id": 2,
+        "tipo": "3 Queijos"
+      },
+      {
+        "id": 3,
+        "tipo": "Parmesão e Orégano"
+      },
+      {
+        "id": 4,
+        "tipo": "Integral"
+      }
+    ],
+    "carnes": [
+        {
+            "id": 1,
+            "tipo": "Boi"
+        },
+        {
+            "id": 2,
+            "tipo": "Picanha"
+        },
+        {
+            "id": 3,
+            "tipo": "Frango"
+        },
+        {
+            "id": 4,
+            "tipo": "Hambúrger vegano"
+        }
+    ],
+    "adicionais": [
+        {
+            "id": 1,
+            "tipo": "Calabresa"
+        },
+        {
+            "id": 2,
+            "tipo": "Bacon"
+        },
+        {
+            "id": 3,
+            "tipo": "Cheddar"
+        },
+        {
+            "id": 4,
+            "tipo": "Alface"
+        },
+        {
+            "id": 5,
+            "tipo": "Tomate"
+        },
+        {
+            "id": 6,
+            "tipo": "Picles"
+        }
+    ]
+  },
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Em andamento"
+    },
+    {
+      "id": 3,
+      "tipo": "Finalizado"
+    }
+  ],
+  "pedidos": []
+}
