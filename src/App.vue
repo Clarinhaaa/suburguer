@@ -1,17 +1,17 @@
 <template>
-  <Navbar v-bind:logo="logoSrc" v-bind:alt="appNome"></Navbar>
+  <Header v-bind:logo="logoSrc" v-bind:alt="appNome"></Header>
   <router-view />
   <Footer></Footer>
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
+import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
-    Navbar,
+    Header,
     Footer,
   },
   data() {
