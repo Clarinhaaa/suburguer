@@ -1,11 +1,45 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <Navbar v-bind:logo="logoSrc" v-bind:alt="appNome"></Navbar>
+  <router-view />
+  <Footer></Footer>
 </template>
 
-<style>
+<script>
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 
+export default {
+  name: "App",
+  components: {
+    Navbar,
+    Footer,
+  },
+  data() {
+    return {
+      logoSrc: "/img/logo.png",
+      appNome: "Suburguer",
+    };
+  },
+};
+</script>
+
+<style global>
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  margin: 50px;
+  min-height: 400px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #222;
+}
 </style>
