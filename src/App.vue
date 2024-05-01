@@ -1,7 +1,7 @@
 <template>
-  <Header v-bind:logo="logoSrc" v-bind:alt="appNome"></Header>
+  <Header v-bind:logo="logoSrc" v-bind:alt="appNome" />
   <router-view />
-  <Footer></Footer>
+  <Footer />
 </template>
 
 <script>
