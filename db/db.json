@@ -70,7 +70,7 @@
     },
     {
       "id": "2",
-      "tipo": "Em andamento"
+      "tipo": "Em produção"
     },
     {
       "id": "3",
@@ -101,6 +101,16 @@
         "Calabresa",
         "Alface",
         "Tomate"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "1708",
+      "nome": "João",
+      "pao": "Integral",
+      "carne": "Hambúrger vegano",
+      "opcionais": [
+        "Alface"
       ],
       "status": "Solicitado"
     }

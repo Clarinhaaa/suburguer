@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Message v-bind:msg="msg" v-if="msg"/>
+    <Message v-bind:msg="msg" v-if="msg" />
     <div>
       <form id="burguer-form" v-on:submit="createPedido($event)">
         <div class="input-container">
@@ -65,12 +65,12 @@
 </template>
 
 <script>
-import Message from './Message.vue'
+import Message from "./Message.vue";
 
 export default {
   name: "BurguerForm",
   components: {
-    Message
+    Message,
   },
   data() {
     return {
@@ -122,14 +122,12 @@ export default {
 
       console.log(response);
 
-      //TODO
-
       //Atribuindo uma mensagem de confirmação do sistema à propriedade "msg"
-      this.msg = `Pedido n° ${response.id} realizado com sucesso!`;
+      this.msg = "Pedido realizado com sucesso!";
 
       //Limpando a mensagem depois de um tempo
       setTimeout(() => {
-        this.msg = ""
+        this.msg = "";
       }, 3000);
 
       //Limpando os campos de input
@@ -194,22 +192,5 @@ select {
 
 .checkbox-container span {
   margin-left: 6px;
-}
-
-input[type="submit"] {
-  background-color: #222;
-  color: #fcba03;
-  font-weight: bold;
-  border: 2px solid #222;
-  padding: 10px;
-  font-size: 16px;
-  margin: 0 auto;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-input[type="submit"]:hover {
-  background-color: transparent;
-  color: #222;
 }
 </style>
