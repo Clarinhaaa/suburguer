@@ -123,7 +123,7 @@ export default {
       console.log(response);
 
       //Atribuindo uma mensagem de confirmação do sistema à propriedade "msg"
-      this.msg = "Pedido realizado com sucesso!";
+      this.msg = `Pedido de ${this.nome} realizado com sucesso!`;
 
       //Limpando a mensagem depois de um tempo
       setTimeout(() => {

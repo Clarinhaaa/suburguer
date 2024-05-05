@@ -89,20 +89,7 @@
         "Tomate",
         "Picles"
       ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "e7dc",
-      "nome": "Ana",
-      "pao": "Parmesão e Orégano",
-      "carne": "Frango",
-      "opcionais": [
-        "Cheddar",
-        "Calabresa",
-        "Alface",
-        "Tomate"
-      ],
-      "status": "Solicitado"
+      "status": "Finalizado"
     },
     {
       "id": "1708",
@@ -111,6 +98,44 @@
       "carne": "Hambúrger vegano",
       "opcionais": [
         "Alface"
+      ],
+      "status": "Finalizado"
+    },
+    {
+      "id": "05a7",
+      "nome": "José",
+      "pao": "Italiano Branco",
+      "carne": "Picanha",
+      "opcionais": [
+        "Alface",
+        "Tomate"
+      ],
+      "status": "Em produção"
+    },
+    {
+      "id": "6a2e",
+      "nome": "Luiza",
+      "pao": "3 Queijos",
+      "carne": "Boi",
+      "opcionais": [
+        "Calabresa",
+        "Bacon",
+        "Cheddar"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "52f4",
+      "nome": "Cleiton",
+      "pao": "Integral",
+      "carne": "Frango",
+      "opcionais": [
+        "Alface",
+        "Cheddar",
+        "Picles",
+        "Tomate",
+        "Calabresa",
+        "Bacon"
       ],
       "status": "Solicitado"
     }

@@ -29,16 +29,22 @@
           </ul>
         </div>
         <div>
-          <select name="staus" class="status">
+          <select
+            name="status"
+            class="status"
+            v-on:change="updatePedido($event, pedido.id)"
+          >
             <option value="">Status</option>
             <option
-              v-for="statusPedido in status"
-              v-bind:key="statusPedido.id"
-              value="statusPedido.tipo"
-              v-bind:selected="pedido.status == statusPedido.tipo"
-            >{{ statusPedido.tipo }}</option>
+              v-for="st in status"
+              v-bind:key="st.id"
+              v-bind:value="st.tipo"
+              v-bind:selected="pedido.status == st.tipo"
+            >
+              {{ st.tipo }}
+            </option>
           </select>
-          <button>Cancelar</button>
+          <button v-on:click="deletePedido(pedido.id)">Cancelar</button>
         </div>
       </div>
     </div>
@@ -57,8 +63,8 @@ export default {
   },
   methods: {
     async getPedidos() {
-      const req = await fetch("http://localhost:3000/pedidos");
-      const data = await req.json();
+      const request = await fetch("http://localhost:3000/pedidos");
+      const data = await request.json();
 
       this.pedidos = data;
 
@@ -66,10 +72,32 @@ export default {
     },
 
     async getStatus() {
-      const req = await fetch("http://localhost:3000/status");
-      const data = await req.json();
+      const request = await fetch("http://localhost:3000/status");
+      const data = await request.json();
 
       this.status = data;
+    },
+
+    async deletePedido(id) {
+      await fetch(`http://localhost:3000/pedidos/${id}`, {
+        method: "DELETE",
+      });
+
+      this.getPedidos();
+    },
+
+    async updatePedido(event, id) {
+      const option = event.target.value;
+      const dataJsonToText = JSON.stringify({ status: option });
+
+      const request = await fetch(`http://localhost:3000/pedidos/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: dataJsonToText,
+      });
+
+      const response = await request.json();
+      console.log(response);
     },
   },
   mounted() {
