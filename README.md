@@ -1,4 +1,8 @@
-# suburguer
+# Suburguer
+
+## Descrição
+
+Projeto feito para o curso de VueJS no canal do YouTube Hora de Codar.
 
 ## Project setup
 ```
