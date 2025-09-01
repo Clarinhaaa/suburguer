@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Projeto feito para o curso de VueJS no canal do YouTube Hora de Codar.
+Projeto feito durante o curso de VueJS no canal do YouTube Hora de Codar.
 
 ## Project setup
 ```
