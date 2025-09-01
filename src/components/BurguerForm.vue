@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Message v-bind:msg="msg" v-if="msg" />
+    <Message v-bind:msg="msg" />
     <div>
       <form id="burguer-form" v-on:submit="createPedido($event)">
         <div class="input-container">

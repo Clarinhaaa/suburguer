@@ -1,5 +1,6 @@
 <template>
   <div id="burguer-table">
+    <Message v-bind:msg="msg" />
     <div id="burguer-table-heading">
       <div class="order-id">ID:</div>
       <div>Cliente:</div>
@@ -44,7 +45,9 @@
               {{ st.tipo }}
             </option>
           </select>
-          <button v-on:click="deletePedido(pedido.id)">Cancelar</button>
+          <button v-on:click="deletePedido(pedido.id)">
+            Cancelar
+          </button>
         </div>
       </div>
     </div>
@@ -52,14 +55,19 @@
 </template>
 
 <script>
+import Message from "./Message.vue";
+
 export default {
   name: "Dashboard",
   data() {
     return {
       pedidos: null,
-      pedidoId: null,
       status: null,
+      msg: "",
     };
+  },
+  components: {
+    Message,
   },
   methods: {
     async getPedidos() {
@@ -79,11 +87,18 @@ export default {
     },
 
     async deletePedido(id) {
-      await fetch(`http://localhost:3000/pedidos/${id}`, {
+      const request = await fetch(`http://localhost:3000/pedidos/${id}`, {
         method: "DELETE",
       });
 
+      const response = request.json();
+
       this.getPedidos();
+
+      this.msg = `Pedido de ${response.nome} deletado com sucesso!`;
+      setTimeout(() => {
+        this.msg = ""
+      }, 3000);
     },
 
     async updatePedido(event, id) {
@@ -98,6 +113,11 @@ export default {
 
       const response = await request.json();
       console.log(response);
+
+      this.msg = `Pedido de ${response.nome} atualizado com sucesso!`
+      setTimeout(() => {
+        this.msg = ""
+      }, 3000);
     },
   },
   mounted() {
